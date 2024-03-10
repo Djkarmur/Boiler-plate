@@ -9,7 +9,7 @@ import PrivateRoute from "./private-public-route/PrivateRoute";
 
 function App() {
   const [count, setCount] = useState(0);
-  const isAuth = false;
+  const isAuth = true;
 
   return (
     

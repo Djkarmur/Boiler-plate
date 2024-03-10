@@ -7,8 +7,12 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "../styles/Navbar.css";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function OffcanvasExample() {
+  const cartProduct = useSelector((state) => state.cartProduct);
+
+  const len = cartProduct.length;
   return (
     <>
       {[false].map((expand) => (
@@ -34,7 +38,7 @@ function OffcanvasExample() {
               <Offcanvas.Body>
                 <Nav className="justify-content-center  flex-grow-1 pe-3 links">
                 <NavLink to="/" className="nav-link"> Home </NavLink>
-                <NavLink to="/cart" className="nav-link"> Cart </NavLink>
+                <NavLink to="/cart" className="nav-link"> Cart({len}) </NavLink>
                 <NavLink to="/about" className="nav-link"> About </NavLink>
                 </Nav>
 

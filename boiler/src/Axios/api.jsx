@@ -5,13 +5,15 @@ import React from 'react';
 
 
 const API = axios.create({
-    baseURL: "https://jsonplaceholder.typicode.com/users",
+    baseURL: "https://dummyjson.com/products",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
     },
     timeout: 3000,
   });
+
+  
 
 
   
